@@ -172,11 +172,11 @@ aabb2.fromCenterSize = function(out, center, size) {
         hx = size[0] * 0.5,
         hy = size[1] * 0.5;
 
-    min.x = x - hx;
-    min.y = y - hy;
+    min[0] = x - hx;
+    min[1] = y - hy;
 
-    max.x = x + hx;
-    max.y = y + hy;
+    max[0] = x + hx;
+    max[1] = y + hy;
 
     return out;
 };
