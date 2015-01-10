@@ -195,7 +195,7 @@ aabb2.notEqual = function(a, b) {
     );
 };
 
-aabb2.str = function() {
+aabb2.str = function(out) {
 
-    return "AABB2(" + vec2.str(aabb2.min) + ", " + vec2.str(aabb2.max) + ")";
+    return "AABB2(" + vec2.str(out.min) + ", " + vec2.str(out.max) + ")";
 };
