@@ -126,8 +126,8 @@ aabb2.fromPoints = function(out, points) {
     }
 
     min[0] = minx;
-    min[0] = miny;
-    max[1] = maxx;
+    min[1] = miny;
+    max[0] = maxx;
     max[1] = maxy;
 
     return out;
@@ -157,8 +157,8 @@ aabb2.fromPointArray = function(out, points) {
     }
 
     min[0] = minx;
-    min[0] = miny;
-    max[1] = maxx;
+    min[1] = miny;
+    max[0] = maxx;
     max[1] = maxy;
 
     return out;
