@@ -1,24 +1,17 @@
-var mathf = require("mathf"),
-    vec2 = require("vec2");
+var vec2 = require("vec2");
 
 
 var aabb2 = module.exports;
 
 
-aabb2.ArrayType = typeof(Float32Array) !== "undefined" ? Float32Array : mathf.ArrayType;
-
-
-function AABB2(ArrayType) {
-
-    ArrayType = ArrayType !== undefined ? ArrayType : aabb2.ArrayType;
-
-    this.min = vec2.create(Infinity, Infinity, ArrayType);
-    this.max = vec2.create(-Infinity, -Infinity, ArrayType);
+function AABB2() {
+    this.min = vec2.create(Infinity, Infinity);
+    this.max = vec2.create(-Infinity, -Infinity);
 }
 
 
-aabb2.create = function(min, max, ArrayType) {
-    var out = new AABB2(ArrayType);
+aabb2.create = function(min, max) {
+    var out = new AABB2();
 
     min && vec2.copy(out.min, min);
     max && vec2.copy(out.max, max);
