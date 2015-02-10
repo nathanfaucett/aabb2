@@ -181,6 +181,21 @@ aabb2.fromCenterSize = function(out, center, size) {
     return out;
 };
 
+aabb2.fromCenterRadius = function(out, center, radius) {
+    var min = out.min,
+        max = out.max,
+        x = center[0],
+        y = center[1];
+
+    min[0] = x - radius;
+    min[1] = y - radius;
+
+    max[0] = x + radius;
+    max[1] = y + radius;
+
+    return out;
+};
+
 aabb2.equal = function(a, b) {
     return (
         vec2.equal(a.min, b.min) ||
