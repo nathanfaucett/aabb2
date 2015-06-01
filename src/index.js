@@ -9,7 +9,6 @@ function AABB2() {
     this.max = vec2.create(-Infinity, -Infinity);
 }
 
-
 aabb2.create = function(min, max) {
     var out = new AABB2();
 
@@ -219,6 +218,22 @@ aabb2.notEqual = function(a, b) {
 };
 
 aabb2.str = function(out) {
-
     return "AABB2(" + vec2.str(out.min) + ", " + vec2.str(out.max) + ")";
+};
+
+aabb2.toJSON = function(out, json) {
+    json = json || {};
+
+    json.min = vec2.copy(json.min || [], out.min);
+    json.max = vec2.copy(json.max || [], out.max);
+
+    return json;
+};
+
+aabb2.fromJSON = function(out, json) {
+
+    vec2.copy(out.min, json.min);
+    vec2.copy(out.max, json.max);
+
+    return json;
 };
