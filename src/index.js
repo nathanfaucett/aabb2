@@ -70,10 +70,10 @@ aabb2.expandScalar = function(out, scalar) {
     return out;
 };
 
-aabb2.union = function(out, a) {
+aabb2.union = function(out, a, b) {
 
-    vec2.min(out.min, a.min);
-    vec2.max(out.max, a.max);
+    vec2.min(out.min, a.min, b.min);
+    vec2.max(out.max, a.max, b.max);
 
     return out;
 };
