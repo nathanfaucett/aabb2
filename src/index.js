@@ -9,6 +9,9 @@ function AABB2() {
     this.max = vec2.create(-Infinity, -Infinity);
 }
 
+
+aabb2.AABB2 = AABB2;
+
 aabb2.create = function(min, max) {
     var out = new AABB2();
 
@@ -220,6 +223,8 @@ aabb2.notEqual = function(a, b) {
 aabb2.str = function(out) {
     return "AABB2(" + vec2.str(out.min) + ", " + vec2.str(out.max) + ")";
 };
+
+aabb2.string = aabb2.toString = aabb2.str;
 
 aabb2.toJSON = function(out, json) {
     json = json || {};
