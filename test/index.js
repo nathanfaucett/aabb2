@@ -1,5 +1,5 @@
 var tape = require("tape"),
-    vec2 = require("vec2"),
+    vec2 = require("@nathanfaucett/vec2"),
     aabb2 = require("..");
 
 
