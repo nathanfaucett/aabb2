@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/aabb2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "aabb2 for the browser and node.js",
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
     "zuul": "^3.7.2"
   },
   "dependencies": {
-    "@nathanfaucett/vec2": "^0.0.1"
+    "@nathanfaucett/vec2": "^0.0.2"
   }
 }
