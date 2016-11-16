@@ -208,15 +208,15 @@ aabb2.fromCenterRadius = function(out, center, radius) {
 
 aabb2.equal = function(a, b) {
     return (
-        vec2.equal(a.min, b.min) ||
-        vec2.equal(a.max, b.max)
+        vec2.equals(a.min, b.min) ||
+        vec2.equals(a.max, b.max)
     );
 };
 
 aabb2.notEqual = function(a, b) {
     return (
-        vec2.notEqual(a.min, b.min) ||
-        vec2.notEqual(a.max, b.max)
+        vec2.notEquals(a.min, b.min) ||
+        vec2.notEquals(a.max, b.max)
     );
 };
 

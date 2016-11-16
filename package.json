@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/aabb2",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "aabb2 for the browser and node.js",
   "repository": {
     "type": "git",
